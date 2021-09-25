@@ -1,5 +1,7 @@
 import './App.css';
 import Birthdays from './components/Birthdays';
+import Birthdays2 from './components/Birthdays2';
+import Birthdays3 from './components/Birthdays3';
 
 
 const peopleArr = [
@@ -32,15 +34,36 @@ const peopleArr = [
 function App() {
   return (
     <div className="App">
-      {peopleArr.map((personObj, index) => (
+      {peopleArr.map((birthdaysObj, index) => (
         <Birthdays
           key={index}
-          firstName={personObj.firstName}
-          lastName={personObj.lastName}
-          age={personObj.age}
-          hairColor={personObj.hairColor}
+          firstName={birthdaysObj.firstName}
+          lastName={birthdaysObj.lastName}
+          age={birthdaysObj.age}
+          hairColor={birthdaysObj.hairColor}
         />
       ))}
+
+      {peopleArr.map((birthdays2Obj,index) => (
+        <Birthdays2 
+          key={index}
+          firstName={birthdays2Obj.firstName, "birthday2"}
+          lastName={birthdays2Obj.lastName}
+          age={birthdays2Obj.age}
+          hairColor={birthdays2Obj.hairColor}
+        />
+      ))}
+
+      {peopleArr.map((birthdays3Obj,index) => (
+        <Birthdays3 
+          key={index}
+          firstName={birthdays3Obj.firstName, "birthday3"}
+          lastName={birthdays3Obj.lastName}
+          age={birthdays3Obj.age}
+          hairColor={birthdays3Obj.hairColor}
+        />
+      ))}
+
       {/* <PersonCard
         firstName={peopleArr[0].firstName}
         lastName={peopleArr[0].lastName}
